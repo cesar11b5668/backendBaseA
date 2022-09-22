@@ -1,12 +1,6 @@
 require('dotenv').config()
 
-const express = require('express')
-const app = express()
+const Server = require('./Server')
+const server = new Server()
 
-app.get('/', (req , res) => {
-    res.send('hola mundo')
-})
-
-app.listen(process.env.PORT, () => {
-    console.log("backend en ejecucion en el puerto", process.env.PORT)
-})
+server.listen()
