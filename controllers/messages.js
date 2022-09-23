@@ -1,12 +1,28 @@
 const rootMessage = (req, res) => {
-    res.send("Hola buendia!")}
+    res.send("Hola buen dia :D!")}
     
     
 const hiMessage =  (req, res) => {
     res.send("Hola mundo!")}
 
 
-    const byeMessage = (req, res) => {
+const byeMessage = (req, res) => {
         res.send("Adios Mundo!")}
 
-    module.exports = {rootMessage , hiMessage , byeMessage}      
+const postMessage = (req, res) => {
+            res.send("Mensaje POST!")}
+
+            const putMessage = (req, res) => {
+                res.send("mensaje PUT!")}
+
+                const deleteMessage = (req, res) => {
+                    res.send("mensaje delete")}                
+
+
+    module.exports = {rootMessage , 
+        hiMessage , 
+        byeMessage, 
+        postMessage, 
+        putMessage, 
+        deleteMessage
+    }      

@@ -12,6 +12,7 @@ class Server{
     }
 
     routes(){
+        
         this.app.use(this.paths.messages, messagesRouter)
     }
 
