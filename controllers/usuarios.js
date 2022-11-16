@@ -126,7 +126,7 @@ const getUserByID = async (req = request, res = response) => {
          res.status(404).json({msg: `no se pudo agregar el registro del usuario ${Usuario}`})
          return
    }
-      res.json({msg: `el usuario ${Usuario} se agreggó correctamente :D`})
+      res.json({msg: `el usuario ${Usuario} se agrego correctamente :D`})
       return
    } catch (error) {
       console.log(error)
@@ -312,4 +312,4 @@ const getUserByID = async (req = request, res = response) => {
 
 
 
-module.exports = {getUsers, getUserByID, deleteUserByID, addUser, updateUserByUsuario, signIn}
+module.exports = {getUsers, getUserByID, deleteUserByID, addUser, updateUserByUsuario, signIn, newPassword}

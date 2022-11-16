@@ -14,7 +14,7 @@ const modeloUsuarios = {
         Activo
      ) VALUES (
         '?',
-        '?,
+        '?',
         '?',
         ?,
         '?',
