@@ -188,6 +188,7 @@ const updatefighterZByfighter = async (req = request, res = response) => { const
 
       if(user){
          res.status(403).json({msg: `El usuario ${Luchador} no se encuentra registrado`})
+         return
       }
 
       const affectedRows = await conn.query(modelodblegends.queryupdatebyfighter[

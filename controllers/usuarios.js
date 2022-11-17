@@ -1,7 +1,7 @@
 const { request, response } = require("express");
 const bcryptjs = require("bcryptjs")
 const pool = require("../db/connection");
-const modeloUsuarios = require("../models/usuarios");
+const {modeloUsuarios, updateUsuario} = require("../models/usuarios");
 const getUsers = async (req = request, res = response) => {
  let conn;
 
@@ -179,16 +179,7 @@ const getUserByID = async (req = request, res = response) => {
          res.status(403).json({msg: `El usuario ${Usuario} no se encuentra registrado`})
       }
 
-      const affectedRows = await conn.query(modeloUsuarios.queryupdatebyusuario[
-         Nombre || user.Nombre,
-            Apellidos || user.Apellidos,
-            Edad || user.Edad,
-            Genero || user.Genero,
-            Fecha_nacimiento,
-            Usuario
-      ]
-        
-      , (error) => {throw new Error(error)})
+      const affectedRows = await conn.query(updateUsuario (Nombre,Apellidos,Edad,Genero,Fecha_nacimiento,Usuario), (error) => {throw new Error(error)})
       
 
       if (affectedRows === 0) {

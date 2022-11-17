@@ -63,6 +63,8 @@ const modeloDBlegends = {
       Activo=?
       WHERE DBlegends=?`,
 
+
+
     
 }
 
